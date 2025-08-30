@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Ashraaf Maris Assobah</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.light {
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
+      color: #333;
+    }
+    body.dark {
+      background: linear-gradient(135deg, #232526, #414345);
+      color: #f5f5f5;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 1rem;
+      text-align: center;
+    }
+    .card {
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      background: #ff9800;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    a:hover {
+      background: #e68900;
+    }
+  </style>
+</head>
+<body class="light">
+  <button class="toggle-btn" onclick="toggleTheme()">🌙</button>
+  <header>
+    <h1>Ashraaf Maris Assobah</h1>
+    <p>Sukarame, Bandar Lampung</p>
+    <h3>Posisi Incaran: Barista</h3>
+  </header>
+  <section>
+    <div class="card">
+      <h2>Tentang Saya</h2>
+      <p>Saya adalah lulusan SMA dengan pengalaman bekerja sebagai Barista selama 1 tahun. Terbiasa melayani pelanggan dengan ramah, teliti dalam meracik minuman, dan mampu bekerja dalam tim.</p>
+    </div>
+    <div class="card">
+      <h2>Pengalaman</h2>
+      <p><strong>Barista (1 Tahun)</strong> – Melayani pelanggan, membuat kopi & minuman, serta menjaga kebersihan area kerja.</p>
+    </div>
+    <div class="card">
+      <h2>Kontak</h2>
+      <p>Email: teknoxmyth@gmail.com</p>
+      <p>WhatsApp: 089501826464</p>
+      <a href="cv.pdf" download>Download CV</a>
+    </div>
+  </section>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const btn = document.querySelector('.toggle-btn');
+      body.classList.toggle('dark');
+      body.classList.toggle('light');
+      btn.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+    }
+  </script>
+</body>
+</html>
